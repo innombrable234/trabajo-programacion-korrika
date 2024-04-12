@@ -54,3 +54,17 @@ C:\Users\HP\OneDrive\Desktop\VisualStudio\Programacion\ParcialTerceraEva\Ex31 Ko
 C:\Users\HP\OneDrive\Desktop\VisualStudio\Programacion\ParcialTerceraEva\Ex31 Korrika2024 Alumnado\GestionKorrika\obj\Debug\GestionKorrika.dll
 C:\Users\HP\OneDrive\Desktop\VisualStudio\Programacion\ParcialTerceraEva\Ex31 Korrika2024 Alumnado\GestionKorrika\obj\Debug\GestionKorrika.xml
 C:\Users\HP\OneDrive\Desktop\VisualStudio\Programacion\ParcialTerceraEva\Ex31 Korrika2024 Alumnado\GestionKorrika\obj\Debug\GestionKorrika.pdb
+C:\Users\luism\Desktop\Clase\Programación\PROYECTO\trabajo-programacion-korrika\Ex31 Korrika2024 Alumnado\GestionKorrika\bin\Debug\GestionKorrika.dll
+C:\Users\luism\Desktop\Clase\Programación\PROYECTO\trabajo-programacion-korrika\Ex31 Korrika2024 Alumnado\GestionKorrika\bin\Debug\GestionKorrika.pdb
+C:\Users\luism\Desktop\Clase\Programación\PROYECTO\trabajo-programacion-korrika\Ex31 Korrika2024 Alumnado\GestionKorrika\bin\Debug\GestionKorrika.xml
+C:\Users\luism\Desktop\Clase\Programación\PROYECTO\trabajo-programacion-korrika\Ex31 Korrika2024 Alumnado\GestionKorrika\bin\Debug\Entidades.dll
+C:\Users\luism\Desktop\Clase\Programación\PROYECTO\trabajo-programacion-korrika\Ex31 Korrika2024 Alumnado\GestionKorrika\bin\Debug\Entidades.pdb
+C:\Users\luism\Desktop\Clase\Programación\PROYECTO\trabajo-programacion-korrika\Ex31 Korrika2024 Alumnado\GestionKorrika\bin\Debug\Entidades.xml
+C:\Users\luism\Desktop\Clase\Programación\PROYECTO\trabajo-programacion-korrika\Ex31 Korrika2024 Alumnado\GestionKorrika\obj\Debug\GestionKorrika.vbproj.AssemblyReference.cache
+C:\Users\luism\Desktop\Clase\Programación\PROYECTO\trabajo-programacion-korrika\Ex31 Korrika2024 Alumnado\GestionKorrika\obj\Debug\GestionKorrika.Resources.resources
+C:\Users\luism\Desktop\Clase\Programación\PROYECTO\trabajo-programacion-korrika\Ex31 Korrika2024 Alumnado\GestionKorrika\obj\Debug\GestionKorrika.vbproj.GenerateResource.cache
+C:\Users\luism\Desktop\Clase\Programación\PROYECTO\trabajo-programacion-korrika\Ex31 Korrika2024 Alumnado\GestionKorrika\obj\Debug\GestionKorrika.vbproj.CoreCompileInputs.cache
+C:\Users\luism\Desktop\Clase\Programación\PROYECTO\trabajo-programacion-korrika\Ex31 Korrika2024 Alumnado\GestionKorrika\obj\Debug\GestionKorrika.vbproj.CopyComplete
+C:\Users\luism\Desktop\Clase\Programación\PROYECTO\trabajo-programacion-korrika\Ex31 Korrika2024 Alumnado\GestionKorrika\obj\Debug\GestionKorrika.dll
+C:\Users\luism\Desktop\Clase\Programación\PROYECTO\trabajo-programacion-korrika\Ex31 Korrika2024 Alumnado\GestionKorrika\obj\Debug\GestionKorrika.xml
+C:\Users\luism\Desktop\Clase\Programación\PROYECTO\trabajo-programacion-korrika\Ex31 Korrika2024 Alumnado\GestionKorrika\obj\Debug\GestionKorrika.pdb

@@ -1,4 +1,5 @@
-﻿Imports Entidades
+﻿Imports System.Collections.Specialized.BitVector32
+Imports Entidades
 Imports GestionKorrika
 
 Public Class FrmPrincipal
@@ -7,15 +8,23 @@ Public Class FrmPrincipal
             MessageBox.Show("No pueden haber campos vacíos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
+
         If korrika Is Nothing Then
             korrika = New Korrika(txtNumKorrika.Text, txtAnyo.Text, txtEslogan.Text, txtFechaInicio.Text, txtFechaFin.Text, txtCantKms.Text)
-            Exit Sub
+            Dim msg As String = korrika.LeerKorrika
+            If Not msg = "" Then
+                MessageBox.Show(msg)
+                Exit Sub
+            End If
+        Else
+            Dim respuestaSN As DialogResult = MessageBox.Show($"Ya has creado una korrika {korrika.toString(True)}. ¿Deseas crear otra nueva?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If respuestaSN = DialogResult.Yes Then
+                korrika = Nothing
+                btnCrearKorrika_Click(Nothing, Nothing)
+            End If
         End If
-        Dim respuestaSN As DialogResult = MessageBox.Show($"Ya has creado una korrika {korrika.toString(True)}. ¿Deseas crear otra nueva?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-        If respuestaSN = DialogResult.Yes Then
-            korrika = Nothing
-            btnCrearKorrika_Click(Nothing, Nothing)
-        End If
+
+
     End Sub
 
     Private Sub FinalizarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FinalizarToolStripMenuItem.Click
@@ -39,4 +48,8 @@ Public Class FrmPrincipal
         Dim frmFinanciacion As New FrmFinanciacion
         frmFinanciacion.ShowDialog()
     End Sub
+
+
+
+
 End Class

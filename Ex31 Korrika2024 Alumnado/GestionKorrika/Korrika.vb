@@ -1,7 +1,10 @@
 ﻿Imports System.Collections.ObjectModel
+Imports System.IO
 Imports Entidades
 
+
 Public Class Korrika
+    Private Const NOMBREFICHERO As String = "./Korrika23.txt"
     Public Property DatosKorrika As DatosGeneralesKorrika
     Private _Provincias As New List(Of String) From {"araba", "gipuzkoa", "nafarroa", "bizkaia", "zuberoa", "nafarra behera", "lapurdi"}
     Public ReadOnly Property Provincias As ReadOnlyCollection(Of String)
@@ -10,7 +13,7 @@ Public Class Korrika
         End Get
     End Property
 
-    Private _Kilometros As New List(Of Kilometro) From {}
+    Private _Kilometros As New List(Of Kilometro)
     Public ReadOnly Property Kilometros As ReadOnlyCollection(Of Kilometro)
         Get
             Return _Kilometros.AsReadOnly
@@ -110,4 +113,29 @@ Public Class Korrika
         Next
         Return kmLibres
     End Function
+    Public Function LeerKorrika() As String
+        Dim existeFichero = File.Exists(NOMBREFICHERO)
+
+        If existeFichero = False Then
+            Return $"El fichero {NOMBREFICHERO} no existe"
+        End If
+        Dim lineas() As String = File.ReadAllLines(NOMBREFICHERO)
+        _Kilometros = New List(Of Kilometro)
+        For Each linea In lineas
+            Dim verificarFecha As Date
+            Dim datos As String() = linea.Split("*")
+            If Date.TryParse(datos(2), verificarFecha) Then
+                If datos.Length < 4 Then
+                    Dim kilometroCrear As New Kilometro(datos(0), datos(1), datos(2), datos(3))
+                    _Kilometros.Add(kilometroCrear)
+                Else
+                    Dim kilometroCrear As New KilometroFinanciado(datos(0), datos(1), datos(2), datos(3), datos(4), datos(5))
+                    _Kilometros.Add(kilometroCrear)
+                End If
+
+            End If
+        Next
+        Return ""
+    End Function
+
 End Class
