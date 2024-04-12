@@ -54,3 +54,10 @@ C:\Users\HP\OneDrive\Desktop\VisualStudio\Programacion\ParcialTerceraEva\Ex31 Ko
 C:\Users\HP\OneDrive\Desktop\VisualStudio\Programacion\ParcialTerceraEva\Ex31 Korrika2024 Alumnado\GestionKorrika\obj\Debug\GestionKorrika.dll
 C:\Users\HP\OneDrive\Desktop\VisualStudio\Programacion\ParcialTerceraEva\Ex31 Korrika2024 Alumnado\GestionKorrika\obj\Debug\GestionKorrika.xml
 C:\Users\HP\OneDrive\Desktop\VisualStudio\Programacion\ParcialTerceraEva\Ex31 Korrika2024 Alumnado\GestionKorrika\obj\Debug\GestionKorrika.pdb
+C:\Users\Ruben\Desktop\trabajo korrika\trabajo-programacion-korrika\Ex31 Korrika2024 Alumnado\GestionKorrika\obj\Debug\GestionKorrika.vbproj.AssemblyReference.cache
+C:\Users\Ruben\Desktop\trabajo korrika\trabajo-programacion-korrika\Ex31 Korrika2024 Alumnado\GestionKorrika\obj\Debug\GestionKorrika.Resources.resources
+C:\Users\Ruben\Desktop\trabajo korrika\trabajo-programacion-korrika\Ex31 Korrika2024 Alumnado\GestionKorrika\obj\Debug\GestionKorrika.vbproj.GenerateResource.cache
+C:\Users\Ruben\Desktop\trabajo korrika\trabajo-programacion-korrika\Ex31 Korrika2024 Alumnado\GestionKorrika\obj\Debug\GestionKorrika.vbproj.CoreCompileInputs.cache
+C:\Users\Ruben\Desktop\trabajo korrika\trabajo-programacion-korrika\Ex31 Korrika2024 Alumnado\GestionKorrika\obj\Debug\GestionKorrika.dll
+C:\Users\Ruben\Desktop\trabajo korrika\trabajo-programacion-korrika\Ex31 Korrika2024 Alumnado\GestionKorrika\obj\Debug\GestionKorrika.xml
+C:\Users\Ruben\Desktop\trabajo korrika\trabajo-programacion-korrika\Ex31 Korrika2024 Alumnado\GestionKorrika\obj\Debug\GestionKorrika.pdb

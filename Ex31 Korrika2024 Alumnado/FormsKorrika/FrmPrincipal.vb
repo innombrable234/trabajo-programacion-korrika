@@ -39,4 +39,8 @@ Public Class FrmPrincipal
         Dim frmFinanciacion As New FrmFinanciacion
         frmFinanciacion.ShowDialog()
     End Sub
+
+    Private Sub FrmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

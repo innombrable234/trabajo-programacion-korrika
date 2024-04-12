@@ -1,7 +1,9 @@
 ﻿Imports System.Collections.ObjectModel
+Imports System.IO
 Imports Entidades
 
 Public Class Korrika
+    Private Const NombreFichero As String = "./Korrika23.txt"
     Public Property DatosKorrika As DatosGeneralesKorrika
     Private _Provincias As New List(Of String) From {"araba", "gipuzkoa", "nafarroa", "bizkaia", "zuberoa", "nafarra behera", "lapurdi"}
     Public ReadOnly Property Provincias As ReadOnlyCollection(Of String)
@@ -9,6 +11,7 @@ Public Class Korrika
             Return _Provincias.AsReadOnly
         End Get
     End Property
+
 
     Private _Kilometros As New List(Of Kilometro) From {}
     Public ReadOnly Property Kilometros As ReadOnlyCollection(Of Kilometro)
@@ -27,6 +30,42 @@ Public Class Korrika
             Return totalEuros
         End Get
     End Property
+    Public Sub New(datosKorrika As DatosGeneralesKorrika, ByRef mensajeError As String)
+        Me.DatosKorrika = datosKorrika
+        If File.Exists(NombreFichero) Then
+            mensajeError = $"la korrika {datosKorrika.NKorrika} ya existe"
+        Else
+            Dim arraydatos As New List(Of String)
+            arraydatos.AddRange(datosKorrika)
+            For i = 1 To datosKorrika.CantKms
+
+                _Kilometros.Add(New Kilometro(i))
+            Next
+            For i = 0 To arraydatos.Count
+                File.WriteAllLines(NombreFichero, arraydatos.ToArray)
+            Next
+        End If
+
+    End Sub
+    Public Sub New(ByRef mensajeError As String)
+        Me.DatosKorrika = DatosKorrika
+
+        If File.Exists(NombreFichero) Then
+            mensajeError = $"ya existe una korrika"
+        Else
+            Dim arraydatos As New List(Of String)
+            arraydatos.AddRange(DatosKorrika)
+
+            For i = 1 To DatosKorrika.CantKms
+
+                _Kilometros.Add(New Kilometro(i))
+            Next
+            For i = 0 To arraydatos.Count
+                File.WriteAllLines(NombreFichero, arraydatos.ToArray)
+            Next
+        End If
+
+    End Sub
     Public Sub New(datosKorrika As DatosGeneralesKorrika)
         Me.DatosKorrika = datosKorrika
         For i = 1 To datosKorrika.CantKms
@@ -40,6 +79,7 @@ Public Class Korrika
     Public Overrides Function ToString() As String
         Return DatosKorrika.ToString
     End Function
+
     Public Overloads Function toString(strCorto As Boolean) As String
         If strCorto Then
             Return $"Korrika {DatosKorrika.NKorrika} {DatosKorrika.Eslogan}"
