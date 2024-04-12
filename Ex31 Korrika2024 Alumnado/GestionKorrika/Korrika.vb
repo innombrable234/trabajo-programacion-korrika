@@ -1,7 +1,10 @@
 ﻿Imports System.Collections.ObjectModel
+Imports System.IO
+Imports System.Reflection
 Imports Entidades
 
 Public Class Korrika
+    Private Const NOMBREFICHERO As String = "./Ficheros/Korrika23.txt"
     Public Property DatosKorrika As DatosGeneralesKorrika
     Private _Provincias As New List(Of String) From {"araba", "gipuzkoa", "nafarroa", "bizkaia", "zuberoa", "nafarra behera", "lapurdi"}
     Public ReadOnly Property Provincias As ReadOnlyCollection(Of String)
@@ -109,5 +112,31 @@ Public Class Korrika
             End If
         Next
         Return kmLibres
+    End Function
+
+    Public Function GuardarFichero() As String
+        If Not File.Exists(NOMBREFICHERO) Then
+            Return $"No ha sido posible guardar porque el fichero {NOMBREFICHERO} no existe"
+        End If
+
+        If DatosKorrika Is Nothing OrElse Kilometros Is Nothing OrElse Kilometros.Count < 1 Then
+            Return "Aún no has añadido ningún kilómetro en la lista"
+        End If
+        Dim kmStr As String = $"{Me.DatosKorrika.NKorrika}*{Me.DatosKorrika.Anyo}*{Me.DatosKorrika.Eslogan} {Me.DatosKorrika.Eslogan}*{Me.DatosKorrika.FechaInicio}*{Me.DatosKorrika.FechaFin}*{Me.DatosKorrika.CantKms}"
+
+        'todo Guardar primero la Korrika
+        Dim todosKms As New List(Of String)
+            For Each km As Kilometro In Kilometros
+            kmStr &= $"{km.NumKm}*{km.Direccion}*{km.Localidad}*{km.Provincia}"
+            If TypeOf km Is KilometroFinanciado Then
+                Dim kmfinan As KilometroFinanciado = TryCast(km, KilometroFinanciado)
+                kmStr &= $"*{kmfinan.Organizacion}*{kmfinan.Euros}"
+            End If
+            todosKms.Add(kmStr)
+            Next
+
+        File.WriteAllLines(NOMBREFICHERO, todosKms.ToArray)
+        Return ""
+
     End Function
 End Class
