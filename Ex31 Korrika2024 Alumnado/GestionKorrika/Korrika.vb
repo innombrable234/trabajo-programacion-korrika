@@ -13,7 +13,7 @@ Public Class Korrika
         End Get
     End Property
 
-    Private _Kilometros As New List(Of Kilometro) From {}
+    Private _Kilometros As List(Of Kilometro)
     Public ReadOnly Property Kilometros As ReadOnlyCollection(Of Kilometro)
         Get
             Return _Kilometros.AsReadOnly
@@ -36,6 +36,50 @@ Public Class Korrika
             _Kilometros.Add(New Kilometro(i))
         Next
     End Sub
+
+
+    Public Sub New(datosKorrika As DatosGeneralesKorrika, ByRef mensajeError As String)
+        Me.DatosKorrika = datosKorrika
+        If File.Exists(NOMBREFICHERO) Then
+            mensajeError = $"la korrika {datosKorrika.NKorrika} ya existe"
+        Else
+            Dim arraydatos As New List(Of String)
+            arraydatos.AddRange(datosKorrika)
+            For i = 1 To datosKorrika.CantKms
+
+                _Kilometros.Add(New Kilometro(i))
+            Next
+            For i = 0 To arraydatos.Count
+                File.WriteAllLines(NOMBREFICHERO, arraydatos.ToArray)
+            Next
+        End If
+
+    End Sub
+
+    Public Sub New(ByRef mensajeError As String)
+        Me.DatosKorrika = DatosKorrika
+
+        If File.Exists(NOMBREFICHERO) Then
+            mensajeError = $"ya existe una korrika"
+        Else
+            Dim arraydatos As New List(Of String)
+            arraydatos.AddRange(DatosKorrika)
+
+            For i = 0 To arraydatos.Count
+                If DatosKorrika.NKorrika = File.ReadAllLines(NOMBREFICHERO)(0) Then
+                    For j = 0 To arraydatos.Count
+                        File.WriteAllLines(NOMBREFICHERO, arraydatos.ToArray)
+
+                    Next
+                Else
+                    mensajeError = $"el archivo {NOMBREFICHERO} no corresponde a la korrika actual"
+                End If
+            Next
+        End If
+
+
+    End Sub
+
     Public Sub New(nKorrika As Byte, anyo As Integer, eslogan As String, fechaInicio As Date, fechaFin As Date, cantKms As Integer)
         Me.New(New DatosGeneralesKorrika(nKorrika, anyo, eslogan, fechaInicio, fechaFin, cantKms))
     End Sub
@@ -114,7 +158,42 @@ Public Class Korrika
         Return kmLibres
     End Function
 
-    Public Function GuardarFichero() As String
+    Public Function LeerKorrika() As String
+        Dim existeFichero = File.Exists(NOMBREFICHERO)
+
+        If existeFichero = False Then
+            Return $"El fichero {NOMBREFICHERO} no existe"
+        End If
+        Dim lineas() As String = File.ReadAllLines(NOMBREFICHERO)
+        If _Kilometros Is Nothing Then
+            _Kilometros = New List(Of Kilometro)
+        Else
+            _Kilometros.clear
+        End If
+
+        For Each linea In lineas
+            Dim verificarFecha As Date
+            Dim datos As String() = linea.Split("*")
+            If datos.Count = 1 Then
+                _Kilometros = New List(Of Kilometro)
+                Dim kilometroNoDefinido As New Kilometro(datos(0))
+                _Kilometros.Add(kilometroNoDefinido)
+                Exit For
+            End If
+            If Date.TryParse(datos(2), verificarFecha) Then
+                If datos.Length < 4 Then
+                    Dim kilometroCrear As New Kilometro(datos(0), datos(1), datos(2), datos(3))
+                    _Kilometros.Add(kilometroCrear)
+                Else
+                    Dim kilometroCrear As New KilometroFinanciado(datos(0), datos(1), datos(2), datos(3), datos(4), datos(5))
+                    _Kilometros.Add(kilometroCrear)
+                End If
+
+            End If
+        Next
+        Return ""
+    End Function
+    Public Function GrabarFichero() As String
         If Not File.Exists(NOMBREFICHERO) Then
             Return $"No ha sido posible guardar porque el fichero {NOMBREFICHERO} no existe"
         End If
@@ -122,21 +201,26 @@ Public Class Korrika
         If DatosKorrika Is Nothing OrElse Kilometros Is Nothing OrElse Kilometros.Count < 1 Then
             Return "Aún no has añadido ningún kilómetro en la lista"
         End If
-        Dim kmStr As String = $"{Me.DatosKorrika.NKorrika}*{Me.DatosKorrika.Anyo}*{Me.DatosKorrika.Eslogan} {Me.DatosKorrika.Eslogan}*{Me.DatosKorrika.FechaInicio}*{Me.DatosKorrika.FechaFin}*{Me.DatosKorrika.CantKms}"
+        Dim kmStr As String = $"{Me.DatosKorrika.NKorrika}*{Me.DatosKorrika.Anyo}*{Me.DatosKorrika.Eslogan} {Me.DatosKorrika.Eslogan}*{Me.DatosKorrika.FechaInicio.ToShortDateString}*{Me.DatosKorrika.FechaFin.ToShortDateString}*{Me.DatosKorrika.CantKms}"
 
-        'todo Guardar primero la Korrika
-        Dim todosKms As New List(Of String)
-            For Each km As Kilometro In Kilometros
-            kmStr &= $"{km.NumKm}*{km.Direccion}*{km.Localidad}*{km.Provincia}"
-            If TypeOf km Is KilometroFinanciado Then
-                Dim kmfinan As KilometroFinanciado = TryCast(km, KilometroFinanciado)
-                kmStr &= $"*{kmfinan.Organizacion}*{kmfinan.Euros}"
+
+        Dim todosKms As New List(Of String) From {kmStr}
+        For Each km As Kilometro In Kilometros
+            If Not km.Direccion = "" OrElse km.Provincia = "" OrElse km.Localidad = "" Then
+                kmStr = $"{km.NumKm}*{km.Direccion}*{km.Localidad}*{km.Provincia}"
+                If TypeOf km Is KilometroFinanciado Then
+                    Dim kmfinan As KilometroFinanciado = TryCast(km, KilometroFinanciado)
+                    kmStr &= $"*{kmfinan.Organizacion}*{kmfinan.Euros}"
+                End If
+            Else
+                kmStr = km.NumKm
             End If
             todosKms.Add(kmStr)
-            Next
+        Next
 
         File.WriteAllLines(NOMBREFICHERO, todosKms.ToArray)
         Return ""
 
     End Function
+
 End Class
