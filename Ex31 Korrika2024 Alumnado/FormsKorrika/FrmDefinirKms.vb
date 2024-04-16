@@ -6,7 +6,14 @@ Public Class FrmDefinirKms
             MessageBox.Show("No pueden haber campos vacíos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
-        MessageBox.Show(korrika.DefinirKm(txtNumKm.Text, txtDireccion.Text, txtLocalidad.Text, txtProvincia.Text))
+        Dim msg As String = korrika.DefinirKm(txtNumKm.Text, txtDireccion.Text, txtLocalidad.Text, txtProvincia.Text)
+        If msg <> "Se definió correctamente" Then
+            MessageBox.Show(msg)
+        Else
+            MessageBox.Show(msg)
+            korrika.GrabarFichero()
+        End If
+
     End Sub
 
     Private Sub btnVolver_Click(sender As Object, e As EventArgs) Handles btnVolver.Click
