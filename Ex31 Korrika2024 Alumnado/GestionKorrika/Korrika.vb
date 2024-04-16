@@ -7,7 +7,6 @@ Public Class Korrika
     Public ReadOnly Property Cambios As Boolean
         Get
             Dim estandar As String() = File.ReadAllLines(NOMBREFICHERO)
-
             If String.Equals(estandar, File.ReadAllLines(NOMBREFICHERO).ToString) Then
                 Return True
             Else
@@ -190,27 +189,31 @@ Public Class Korrika
         Return ""
     End Function
     Public Function GrabarFichero() As String
-        If Not File.Exists(NombreFichero) Then
-            Return $"No ha sido posible guardar porque el fichero {NombreFichero} no existe"
+        If Not File.Exists(NOMBREFICHERO) Then
+            Return $"No ha sido posible guardar porque el fichero {NOMBREFICHERO} no existe"
         End If
 
         If DatosKorrika Is Nothing OrElse Kilometros Is Nothing OrElse Kilometros.Count < 1 Then
             Return "Aún no has añadido ningún kilómetro en la lista"
         End If
-        Dim kmStr As String = $"{Me.DatosKorrika.NKorrika}{Me.DatosKorrika.Anyo}{Me.DatosKorrika.Eslogan} {Me.DatosKorrika.Eslogan}{Me.DatosKorrika.FechaInicio}{Me.DatosKorrika.FechaFin}{Me.DatosKorrika.CantKms}"
+        Dim kmStr As String = $"{Me.DatosKorrika.NKorrika}*{Me.DatosKorrika.Anyo}*{Me.DatosKorrika.Eslogan} {Me.DatosKorrika.Eslogan}*{Me.DatosKorrika.FechaInicio}*{Me.DatosKorrika.FechaFin}*{Me.DatosKorrika.CantKms}"
 
 
-        Dim todosKms As New List(Of String)
+        Dim todosKms As New List(Of String) From {kmStr}
         For Each km As Kilometro In Kilometros
-            kmStr &= $"{km.NumKm}{km.Direccion}{km.Localidad}{km.Provincia}"
-            If TypeOf km Is KilometroFinanciado Then
-                Dim kmfinan As KilometroFinanciado = TryCast(km, KilometroFinanciado)
-                kmStr &= $"{kmfinan.Organizacion}{kmfinan.Euros}"
+            If Not km.Direccion = "" OrElse km.Provincia = "" OrElse km.Localidad = "" Then
+                kmStr = $"{km.NumKm}*{km.Direccion}*{km.Localidad}*{km.Provincia}"
+                If TypeOf km Is KilometroFinanciado Then
+                    Dim kmfinan As KilometroFinanciado = TryCast(km, KilometroFinanciado)
+                    kmStr &= $"*{kmfinan.Organizacion}*{kmfinan.Euros}"
+                End If
+            Else
+                kmStr = km.NumKm
             End If
             todosKms.Add(kmStr)
         Next
 
-        File.WriteAllLines(NombreFichero, todosKms.ToArray)
+        File.WriteAllLines(NOMBREFICHERO, todosKms.ToArray)
         Return ""
 
     End Function
