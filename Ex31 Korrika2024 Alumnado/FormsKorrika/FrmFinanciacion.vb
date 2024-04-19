@@ -31,8 +31,19 @@ Public Class FrmFinanciacion
             MessageBox.Show("No pueden haber campos vacíos o sin escoger", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
-        MessageBox.Show(korrika.PatrocinarKm(lblNumKm.Text, txtNombreOrganización.Text, txtEuros.Text))
-        cboProvincias_SelectedIndexChanged(Nothing, Nothing)
+
+
+
+        Dim msg As String = "Se han guardado los cambios"
+        If MessageBox.Show("¿Deseas guardar los cambios?", "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+            MessageBox.Show(korrika.PatrocinarKm(lblNumKm.Text, txtNombreOrganización.Text, txtEuros.Text))
+            cboProvincias_SelectedIndexChanged(Nothing, Nothing)
+            MessageBox.Show(msg)
+            korrika.GrabarFichero()
+        Else
+            MessageBox.Show("No se a guardado los cambios")
+            cboProvincias_SelectedIndexChanged(Nothing, Nothing)
+        End If
     End Sub
 
     Private Sub btnTotalRecaudado_Click(sender As Object, e As EventArgs) Handles btnTotalRecaudado.Click

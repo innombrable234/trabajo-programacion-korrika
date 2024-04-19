@@ -11,18 +11,15 @@ Public Class FrmPrincipal
 
         If korrika Is Nothing Then
             korrika = New Korrika(txtNumKorrika.Text, txtAnyo.Text, txtEslogan.Text, txtFechaInicio.Text, txtFechaFin.Text, txtCantKms.Text)
-            Dim msg As String = korrika.LeerKorrika
+            Dim msg = korrika.LeerKorrika
             If Not msg = "" Then
+                korrika.GrabarFichero()
                 MessageBox.Show(msg)
                 Exit Sub
             End If
-        Else
-            Dim respuestaSN As DialogResult = MessageBox.Show($"Ya has creado una korrika {korrika.toString(True)}. ¿Deseas crear otra nueva?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-            If respuestaSN = DialogResult.Yes Then
-                korrika = Nothing
-                btnCrearKorrika_Click(Nothing, Nothing)
-            End If
         End If
+
+
 
 
     End Sub
@@ -49,7 +46,28 @@ Public Class FrmPrincipal
         frmFinanciacion.ShowDialog()
     End Sub
 
-
-
-
+    Private Sub btnAccederKorrika_Click(sender As Object, e As EventArgs) Handles btnAccederKorrika.Click
+        If korrika Is Nothing Then
+            korrika = New Korrika(txtNumKorrika.Text, txtAnyo.Text, txtEslogan.Text, txtFechaInicio.Text, txtFechaFin.Text, txtCantKms.Text)
+            Dim msg As String = korrika.LeerKorrika
+            If Not msg = "" Then
+                korrika.GrabarFichero()
+                MessageBox.Show(msg)
+                Exit Sub
+            End If
+        Else
+            Dim respuestaSN As DialogResult = MessageBox.Show($"Ya has creado una korrika {korrika.toString(True)}. ¿Deseas crear otra nueva?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If respuestaSN = DialogResult.Yes Then
+                korrika = Nothing
+                btnCrearKorrika_Click(Nothing, Nothing)
+                korrika = New Korrika(txtNumKorrika.Text, txtNumKorrika.Text, txtAnyo.Text, txtEslogan.Text, txtFechaInicio.Text, txtFechaFin.Text, txtCantKms.Text)
+                Dim msg As String = korrika.LeerKorrika
+                If Not msg = "" Then
+                    korrika.GrabarFichero()
+                    MessageBox.Show(msg)
+                    Exit Sub
+                End If
+            End If
+        End If
+    End Sub
 End Class

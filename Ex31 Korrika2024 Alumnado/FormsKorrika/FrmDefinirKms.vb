@@ -10,8 +10,23 @@ Public Class FrmDefinirKms
         If msg <> "Se definió correctamente" Then
             MessageBox.Show(msg)
         Else
-            MessageBox.Show(msg)
-            korrika.GrabarFichero()
+            If MessageBox.Show("¿Deseas guardar los cambios?", "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+                MessageBox.Show(msg)
+                korrika.GrabarFichero()
+            Else
+                Dim posicion As Integer = -1
+                For i = 0 To korrika.Kilometros.Count - 1
+                    If korrika.Kilometros(i).NumKm = txtNumKm.Text Then
+                        posicion = i
+                    End If
+
+                Next
+
+                korrika.Kilometros(posicion).Provincia = ""
+                korrika.Kilometros(posicion).Direccion = ""
+                korrika.Kilometros(posicion).Localidad = ""
+            End If
+
         End If
 
     End Sub
