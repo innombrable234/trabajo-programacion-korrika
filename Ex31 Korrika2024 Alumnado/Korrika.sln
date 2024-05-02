@@ -9,6 +9,11 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Entidades", "Entidades\Enti
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GestionKorrika", "GestionKorrika\GestionKorrika.vbproj", "{38B9B7A3-21E3-4501-BB65-2D3098E76FFA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ComentariosProfesorado", "ComentariosProfesorado", "{DE47F198-FC44-46DB-A52A-168D6D0E2712}"
+	ProjectSection(SolutionItems) = preProject
+		Comentarios Profesorado.txt = Comentarios Profesorado.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

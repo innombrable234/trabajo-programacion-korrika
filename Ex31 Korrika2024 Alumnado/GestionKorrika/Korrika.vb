@@ -38,6 +38,7 @@ Public Class Korrika
 
     Public ReadOnly Property Cambios As Boolean
         Get
+            ' TODO ¿Qué es esto???? Error MUY GRAVE
             Dim actual As String() = File.ReadAllLines(NOMBREFICHERO)
             Dim posterior() As String = File.ReadAllLines(NOMBREFICHERO)
             If actual Is posterior Then
@@ -46,15 +47,16 @@ Public Class Korrika
             Return True
         End Get
     End Property
-
+    ' todo Los constructores tenían que sacar posible mensaje de error
     Public Sub New(numero As Integer, datosKorrika As DatosGeneralesKorrika)
         Me.NOMBREFICHERO = $"./Ficheros/Korrika{numero}.txt"
         Me.DatosKorrika = datosKorrika
-        For i = 1 To datosKorrika.CantKms
+        For i = 1 To datosKorrika.CantKms ' todo NOOOOOOOOOOOOO
             _Kilometros.Add(New Kilometro(i))
         Next
     End Sub
     Public Sub New(datosKorrika As DatosGeneralesKorrika)
+        ' TODO No controla si existe el fichero!!!!
         Me.DatosKorrika = datosKorrika
         For i = 1 To datosKorrika.CantKms
             _Kilometros.Add(New Kilometro(i))
@@ -144,12 +146,13 @@ Public Class Korrika
     End Function
     Public Function LeerKorrika() As String
         Dim existeFichero = File.Exists(NOMBREFICHERO)
-        Dim primeraPasada As Boolean = False
+        Dim primeraPasada As Boolean = False ' todo ¿?¿?¿? ESta forma no es la lógica
         If existeFichero = False Then
             Return $"El fichero {NOMBREFICHERO} no existe"
         End If
         Dim lineas() As String = File.ReadAllLines(NOMBREFICHERO)
         _Kilometros = New List(Of Kilometro)
+        ' todo No obtiene los datos generales!!!
         For Each linea In lineas
             If primeraPasada = True Then
 
@@ -157,7 +160,7 @@ Public Class Korrika
                 If datos.Count = 1 Then
                     Dim kilometroNoDefinido As New Kilometro(datos(0))
                     _Kilometros.Add(kilometroNoDefinido)
-                    Exit For
+                    Exit For ' todo ¿¿¿Cómo???? Error grave
                 End If
 
                 If datos.Length <= 4 Then
@@ -178,7 +181,7 @@ Public Class Korrika
 
     Public Function GrabarFichero() As String
 
-
+        ' todo Este If no tiene mucho sentido
         If DatosKorrika Is Nothing OrElse Kilometros Is Nothing OrElse Kilometros.Count < 1 Then
             Return "Aún no has añadido ningún kilómetro en la lista"
         End If
@@ -195,7 +198,7 @@ Public Class Korrika
             kmStr = $"{km.NumKm}*{km.Direccion}*{km.Localidad}*{km.Provincia}"
             If TypeOf km Is KilometroFinanciado Then
                 Dim kmfinan As KilometroFinanciado = TryCast(km, KilometroFinanciado)
-                kmStr &= $"{kmfinan.Organizacion}{kmfinan.Euros}"
+                kmStr &= $"{kmfinan.Organizacion}{kmfinan.Euros}" ' TODO Ver esto....
             End If
             todosKms.Add(kmStr)
         Next

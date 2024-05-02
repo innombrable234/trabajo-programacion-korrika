@@ -1,17 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "G:\\Mi unidad\\Modulos\\1DamProgramacion\\Azterketak\\Ex31 Korrika2024 Alumnado\\",
+  "WorkspaceRootPath": "C:\\Users\\Mar\u00EDa\\Desktop\\Lanean\\Programacion\\Korrika Ficheros Vers1\\G8 RubenLuismiEdu\\Ex31 Korrika2024 Alumnado\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D356AD97-67E5-4040-BFD2-15943496CDB5}|FormsKorrika\\FormsKorrika.vbproj|g:\\mi unidad\\modulos\\1damprogramacion\\azterketak\\ex31 korrika2024 alumnado\\formskorrika\\frmdefinirkms.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{D356AD97-67E5-4040-BFD2-15943496CDB5}|FormsKorrika\\FormsKorrika.vbproj|c:\\users\\mar\u00EDa\\desktop\\lanean\\programacion\\korrika ficheros vers1\\g8 rubenluismiedu\\ex31 korrika2024 alumnado\\formskorrika\\frmprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{D356AD97-67E5-4040-BFD2-15943496CDB5}|FormsKorrika\\FormsKorrika.vbproj|solutionrelative:formskorrika\\frmprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D356AD97-67E5-4040-BFD2-15943496CDB5}|FormsKorrika\\FormsKorrika.vbproj|c:\\users\\mar\u00EDa\\desktop\\lanean\\programacion\\korrika ficheros vers1\\g8 rubenluismiedu\\ex31 korrika2024 alumnado\\formskorrika\\frmprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{D356AD97-67E5-4040-BFD2-15943496CDB5}|FormsKorrika\\FormsKorrika.vbproj|solutionrelative:formskorrika\\frmprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38B9B7A3-21E3-4501-BB65-2D3098E76FFA}|GestionKorrika\\GestionKorrika.vbproj|c:\\users\\mar\u00EDa\\desktop\\lanean\\programacion\\korrika ficheros vers1\\g8 rubenluismiedu\\ex31 korrika2024 alumnado\\gestionkorrika\\korrika.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{38B9B7A3-21E3-4501-BB65-2D3098E76FFA}|GestionKorrika\\GestionKorrika.vbproj|solutionrelative:gestionkorrika\\korrika.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38B9B7A3-21E3-4501-BB65-2D3098E76FFA}|GestionKorrika\\GestionKorrika.vbproj|c:\\users\\mar\u00EDa\\desktop\\lanean\\programacion\\korrika ficheros vers1\\g8 rubenluismiedu\\ex31 korrika2024 alumnado\\gestionkorrika\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
+      "RelativeMoniker": "D:0:0:{38B9B7A3-21E3-4501-BB65-2D3098E76FFA}|GestionKorrika\\GestionKorrika.vbproj|solutionrelative:gestionkorrika\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE47F198-FC44-46DB-A52A-168D6D0E2712}|ComentariosProfesorado{DE47F198-FC44-46DB-A52A-168D6D0E2712}|C:\\Users\\Mar\u00EDa\\Desktop\\Lanean\\Programacion\\Korrika Ficheros Vers1\\G8 RubenLuismiEdu\\Ex31 Korrika2024 Alumnado\\Comentarios Profesorado.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{DE47F198-FC44-46DB-A52A-168D6D0E2712}|ComentariosProfesorado{DE47F198-FC44-46DB-A52A-168D6D0E2712}|solutionrelative:Comentarios Profesorado.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D356AD97-67E5-4040-BFD2-15943496CDB5}|FormsKorrika\\FormsKorrika.vbproj|C:\\Users\\Mar\u00EDa\\Desktop\\Lanean\\Programacion\\Korrika Ficheros Vers1\\G8 RubenLuismiEdu\\Ex31 Korrika2024 Alumnado\\formskorrika\\frmdefinirkms.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{D356AD97-67E5-4040-BFD2-15943496CDB5}|FormsKorrika\\FormsKorrika.vbproj|solutionrelative:formskorrika\\frmdefinirkms.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D356AD97-67E5-4040-BFD2-15943496CDB5}|FormsKorrika\\FormsKorrika.vbproj|g:\\mi unidad\\modulos\\1damprogramacion\\azterketak\\ex31 korrika2024 alumnado\\formskorrika\\frmfinanciacion.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{D356AD97-67E5-4040-BFD2-15943496CDB5}|FormsKorrika\\FormsKorrika.vbproj|C:\\Users\\Mar\u00EDa\\Desktop\\Lanean\\Programacion\\Korrika Ficheros Vers1\\G8 RubenLuismiEdu\\Ex31 Korrika2024 Alumnado\\formskorrika\\frmfinanciacion.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{D356AD97-67E5-4040-BFD2-15943496CDB5}|FormsKorrika\\FormsKorrika.vbproj|solutionrelative:formskorrika\\frmfinanciacion.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D356AD97-67E5-4040-BFD2-15943496CDB5}|FormsKorrika\\FormsKorrika.vbproj|g:\\mi unidad\\modulos\\1damprogramacion\\azterketak\\ex31 korrika2024 alumnado\\formskorrika\\frmfinanciacion.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{D356AD97-67E5-4040-BFD2-15943496CDB5}|FormsKorrika\\FormsKorrika.vbproj|C:\\Users\\Mar\u00EDa\\Desktop\\Lanean\\Programacion\\Korrika Ficheros Vers1\\G8 RubenLuismiEdu\\Ex31 Korrika2024 Alumnado\\formskorrika\\frmfinanciacion.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{D356AD97-67E5-4040-BFD2-15943496CDB5}|FormsKorrika\\FormsKorrika.vbproj|solutionrelative:formskorrika\\frmfinanciacion.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
@@ -22,44 +42,141 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmDefinirKms.vb [Dise\u00F1o]",
-              "DocumentMoniker": "G:\\Mi unidad\\Modulos\\1DamProgramacion\\Azterketak\\Ex31 Korrika2024 Alumnado\\FormsKorrika\\FrmDefinirKms.vb",
-              "RelativeDocumentMoniker": "FormsKorrika\\FrmDefinirKms.vb",
-              "ToolTip": "G:\\Mi unidad\\Modulos\\1DamProgramacion\\Azterketak\\Ex31 Korrika2024 Alumnado\\FormsKorrika\\FrmDefinirKms.vb [Dise\u00F1o]",
-              "RelativeToolTip": "FormsKorrika\\FrmDefinirKms.vb [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-03-26T16:31:59.329Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FrmFinanciacion.vb",
-              "DocumentMoniker": "G:\\Mi unidad\\Modulos\\1DamProgramacion\\Azterketak\\Ex31 Korrika2024 Alumnado\\FormsKorrika\\FrmFinanciacion.vb",
-              "RelativeDocumentMoniker": "FormsKorrika\\FrmFinanciacion.vb",
-              "ToolTip": "G:\\Mi unidad\\Modulos\\1DamProgramacion\\Azterketak\\Ex31 Korrika2024 Alumnado\\FormsKorrika\\FrmFinanciacion.vb",
-              "RelativeToolTip": "FormsKorrika\\FrmFinanciacion.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "FrmPrincipal.vb",
+              "DocumentMoniker": "C:\\Users\\Mar\u00EDa\\Desktop\\Lanean\\Programacion\\Korrika Ficheros Vers1\\G8 RubenLuismiEdu\\Ex31 Korrika2024 Alumnado\\FormsKorrika\\FrmPrincipal.vb",
+              "RelativeDocumentMoniker": "FormsKorrika\\FrmPrincipal.vb",
+              "ToolTip": "C:\\Users\\Mar\u00EDa\\Desktop\\Lanean\\Programacion\\Korrika Ficheros Vers1\\G8 RubenLuismiEdu\\Ex31 Korrika2024 Alumnado\\FormsKorrika\\FrmPrincipal.vb",
+              "RelativeToolTip": "FormsKorrika\\FrmPrincipal.vb",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAgwBIAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-03-26T16:31:21.269Z",
+              "WhenOpened": "2024-05-02T09:37:58.183Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "FrmPrincipal.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Mar\u00EDa\\Desktop\\Lanean\\Programacion\\Korrika Ficheros Vers1\\G8 RubenLuismiEdu\\Ex31 Korrika2024 Alumnado\\FormsKorrika\\FrmPrincipal.vb",
+              "RelativeDocumentMoniker": "FormsKorrika\\FrmPrincipal.vb",
+              "ToolTip": "C:\\Users\\Mar\u00EDa\\Desktop\\Lanean\\Programacion\\Korrika Ficheros Vers1\\G8 RubenLuismiEdu\\Ex31 Korrika2024 Alumnado\\FormsKorrika\\FrmPrincipal.vb [Dise\u00F1o]",
+              "RelativeToolTip": "FormsKorrika\\FrmPrincipal.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-05-02T09:37:56.988Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Korrika.vb",
+              "DocumentMoniker": "C:\\Users\\Mar\u00EDa\\Desktop\\Lanean\\Programacion\\Korrika Ficheros Vers1\\G8 RubenLuismiEdu\\Ex31 Korrika2024 Alumnado\\GestionKorrika\\Korrika.vb",
+              "RelativeDocumentMoniker": "GestionKorrika\\Korrika.vb",
+              "ToolTip": "C:\\Users\\Mar\u00EDa\\Desktop\\Lanean\\Programacion\\Korrika Ficheros Vers1\\G8 RubenLuismiEdu\\Ex31 Korrika2024 Alumnado\\GestionKorrika\\Korrika.vb",
+              "RelativeToolTip": "GestionKorrika\\Korrika.vb",
+              "ViewState": "AQIAAJMAAAAAAAAAAAAkwKIAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-05-02T09:31:45.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClassDiagram1.cd",
+              "DocumentMoniker": "C:\\Users\\Mar\u00EDa\\Desktop\\Lanean\\Programacion\\Korrika Ficheros Vers1\\G8 RubenLuismiEdu\\Ex31 Korrika2024 Alumnado\\GestionKorrika\\ClassDiagram1.cd",
+              "RelativeDocumentMoniker": "GestionKorrika\\ClassDiagram1.cd",
+              "ToolTip": "C:\\Users\\Mar\u00EDa\\Desktop\\Lanean\\Programacion\\Korrika Ficheros Vers1\\G8 RubenLuismiEdu\\Ex31 Korrika2024 Alumnado\\GestionKorrika\\ClassDiagram1.cd",
+              "RelativeToolTip": "GestionKorrika\\ClassDiagram1.cd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
+              "WhenOpened": "2024-05-02T09:31:41.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Comentarios Profesorado.txt",
+              "DocumentMoniker": "C:\\Users\\Mar\u00EDa\\Desktop\\Lanean\\Programacion\\Korrika Ficheros Vers1\\G8 RubenLuismiEdu\\Ex31 Korrika2024 Alumnado\\Comentarios Profesorado.txt",
+              "RelativeDocumentMoniker": "Comentarios Profesorado.txt",
+              "ToolTip": "C:\\Users\\Mar\u00EDa\\Desktop\\Lanean\\Programacion\\Korrika Ficheros Vers1\\G8 RubenLuismiEdu\\Ex31 Korrika2024 Alumnado\\Comentarios Profesorado.txt",
+              "RelativeToolTip": "Comentarios Profesorado.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-05-02T09:03:38.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FrmDefinirKms.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Mar\u00EDa\\Desktop\\Lanean\\Programacion\\Korrika Ficheros Vers1\\G8 RubenLuismiEdu\\Ex31 Korrika2024 Alumnado\\FormsKorrika\\FrmDefinirKms.vb",
+              "RelativeDocumentMoniker": "FormsKorrika\\FrmDefinirKms.vb",
+              "ToolTip": "C:\\Users\\Mar\u00EDa\\Desktop\\Lanean\\Programacion\\Korrika Ficheros Vers1\\G8 RubenLuismiEdu\\Ex31 Korrika2024 Alumnado\\FormsKorrika\\FrmDefinirKms.vb [Dise\u00F1o]",
+              "RelativeToolTip": "FormsKorrika\\FrmDefinirKms.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-26T16:31:59.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FrmFinanciacion.vb",
+              "DocumentMoniker": "C:\\Users\\Mar\u00EDa\\Desktop\\Lanean\\Programacion\\Korrika Ficheros Vers1\\G8 RubenLuismiEdu\\Ex31 Korrika2024 Alumnado\\FormsKorrika\\FrmFinanciacion.vb",
+              "RelativeDocumentMoniker": "FormsKorrika\\FrmFinanciacion.vb",
+              "ToolTip": "C:\\Users\\Mar\u00EDa\\Desktop\\Lanean\\Programacion\\Korrika Ficheros Vers1\\G8 RubenLuismiEdu\\Ex31 Korrika2024 Alumnado\\FormsKorrika\\FrmFinanciacion.vb",
+              "RelativeToolTip": "FormsKorrika\\FrmFinanciacion.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-03-26T16:31:21.269Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "FrmFinanciacion.vb [Dise\u00F1o]",
-              "DocumentMoniker": "G:\\Mi unidad\\Modulos\\1DamProgramacion\\Azterketak\\Ex31 Korrika2024 Alumnado\\FormsKorrika\\FrmFinanciacion.vb",
+              "DocumentMoniker": "C:\\Users\\Mar\u00EDa\\Desktop\\Lanean\\Programacion\\Korrika Ficheros Vers1\\G8 RubenLuismiEdu\\Ex31 Korrika2024 Alumnado\\FormsKorrika\\FrmFinanciacion.vb",
               "RelativeDocumentMoniker": "FormsKorrika\\FrmFinanciacion.vb",
               "ToolTip": "G:\\Mi unidad\\Modulos\\1DamProgramacion\\Azterketak\\Ex31 Korrika2024 Alumnado\\FormsKorrika\\FrmFinanciacion.vb [Dise\u00F1o]",
-              "RelativeToolTip": "FormsKorrika\\FrmFinanciacion.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-03-26T16:31:18.609Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-03-26T16:31:18.609Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 169,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
             }
           ]
         }

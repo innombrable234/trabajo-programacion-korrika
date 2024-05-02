@@ -49,7 +49,7 @@ Public Class FrmPrincipal
     Private Sub btnAccederKorrika_Click(sender As Object, e As EventArgs) Handles btnAccederKorrika.Click
         If korrika Is Nothing Then
             korrika = New Korrika(txtNumKorrika.Text, txtAnyo.Text, txtEslogan.Text, txtFechaInicio.Text, txtFechaFin.Text, txtCantKms.Text)
-            Dim msg As String = korrika.LeerKorrika
+            Dim msg As String = korrika.LeerKorrika ' todo Todo era problema del constructor, no de esto
             If Not msg = "" Then
                 korrika.GrabarFichero()
                 MessageBox.Show(msg)
